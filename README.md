@@ -1,5 +1,7 @@
 JALA Academy By VAISHNAVI
+
 A beginner-friendly Spring Boot web application inspired by the JALA Academy / Magnus dashboard UI.
+
 This project is built using:
 Java
 Spring Boot
@@ -9,16 +11,19 @@ Vanilla JavaScript
 Maven
 No database is used in this version.
 All employee data is stored temporarily in memory using Java collections.
+
 Features
 Authentication
 Login Page
 Session Management
 Logout Functionality
 Remember Me UI
+
 Login Credentials
 Plain text
 Email: training@jalaacademy.com
 Password: jobprogram
+
 Dashboard Features
 Employee Module
 Create Employee
@@ -62,6 +67,7 @@ Notifications
 Project Cards
 Toast Notifications
 Dynamic Success Messages
+
 Technologies Used
 Plain text
 Java 24
@@ -86,6 +92,7 @@ src
                   ├── dashboard.html
                   ├── style.css
                   └── script.js
+                  
 How to Run the Project
 Step 1
 Open project in IntelliJ IDEA or VS Code.
@@ -108,8 +115,10 @@ File Upload Storage
 REST API Documentation
 Responsive Mobile Design
 Charts & Analytics
+
 Author
 Vaishnavi K
 Built for learning purposes.
+
 <img width="1919" height="972" alt="Screenshot 2026-05-06 172620" src="https://github.com/user-attachments/assets/ae5b4e98-ae1b-4e5c-893e-825049cd3f5f" />
 <img width="1898" height="972" alt="Screenshot 2026-05-06 172806" src="https://github.com/user-attachments/assets/4cb7333e-f043-4960-90b2-7b33443e15c5" />
