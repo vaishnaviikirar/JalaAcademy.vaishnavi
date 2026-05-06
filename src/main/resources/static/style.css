@@ -1,0 +1,342 @@
+body{
+margin:0;
+font-family:Arial;
+background:#dde3e8;
+}
+
+.loginPage{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(to right,#0f172a,#1e3a5f);
+}
+
+.loginContainer{
+width:950px;
+display:flex;
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 0 20px rgba(0,0,0,.3);
+}
+
+.leftSide{
+width:50%;
+padding:50px;
+background:#16212b;
+color:white;
+}
+
+.rightSide{
+width:50%;
+padding:50px;
+text-align:center;
+}
+
+.yellowBox{
+background:yellow;
+padding:15px;
+border-radius:10px;
+color:black;
+font-weight:bold;
+margin:20px 0;
+}
+
+input{
+width:90%;
+padding:12px;
+margin:10px 0;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+padding:12px 18px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+margin:5px;
+}
+
+.secondaryBtn{
+background:#475569;
+}
+
+.topbar{
+height:70px;
+background:#3b82b6;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 20px;
+color:white;
+}
+
+.sidebar{
+width:240px;
+height:100vh;
+background:#16212b;
+position:fixed;
+color:white;
+padding:20px;
+overflow:auto;
+}
+
+.menuTitle{
+padding:15px;
+background:#223140;
+margin-top:10px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.submenu{
+display:none;
+padding-left:20px;
+animation:fade .3s;
+}
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+.submenu p{
+cursor:pointer;
+padding:10px;
+}
+
+.content{
+margin-left:300px;
+padding:30px;
+}
+
+.noticeBox{
+background:yellow;
+padding:15px;
+margin-bottom:20px;
+font-weight:bold;
+}
+
+.section{
+display:none;
+}
+
+.active{
+display:block;
+}
+
+table{
+width:100%;
+background:white;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th,td{
+padding:12px;
+border:1px solid #ccc;
+}
+
+.tab{
+display:none;
+background:white;
+padding:20px;
+margin-top:20px;
+border-radius:10px;
+}
+
+.activeTab{
+display:block;
+}
+
+.accordionContent{
+display:none;
+background:white;
+padding:20px;
+margin-top:10px;
+border-radius:10px;
+}
+
+.tooltipBox{
+position:relative;
+display:inline-block;
+background:#2563eb;
+padding:15px;
+color:white;
+border-radius:5px;
+}
+
+.tooltipText{
+visibility:hidden;
+position:absolute;
+background:black;
+color:white;
+padding:8px;
+top:-45px;
+left:0;
+}
+
+.tooltipBox:hover .tooltipText{
+visibility:visible;
+}
+
+.gallery{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.gallery img{
+border-radius:10px;
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.linkTabs{
+    margin-bottom:20px;
+}
+
+.linkContent{
+    display:none;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+.activeLink{
+    display:block;
+}
+
+.companyImage{
+    width:140px;
+    height:100px;
+    object-fit:contain;
+    margin:20px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.companyImage:hover{
+    transform:scale(1.08);
+}
+
+#statusResult{
+    margin-top:20px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.successBox,.infoBox,.warningBox,.dangerBox{
+padding:15px;
+color:white;
+margin-bottom:10px;
+}
+
+.successBox{background:#16a34a;}
+.infoBox{background:#0ea5e9;}
+.warningBox{background:#f59e0b;}
+.dangerBox{background:#dc2626;}
+
+.progress{
+width:500px;
+height:25px;
+background:#ccc;
+border-radius:20px;
+overflow:hidden;
+}
+
+.progressFill{
+width:70%;
+height:100%;
+background:#16a34a;
+}
+
+.cards{
+display:flex;
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+width:220px;
+box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+.cssTabs{
+    margin-bottom:20px;
+}
+
+.cssContent{
+    display:none;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+.activeCss{
+    display:block;
+}
+
+.label{
+    padding:10px 18px;
+    color:white;
+    border-radius:5px;
+    margin-right:10px;
+}
+
+.successLabel{
+    background:green;
+}
+
+.warningLabel{
+    background:orange;
+}
+
+.dangerLabel{
+    background:red;
+}
+
+.greenBtn{
+    background:green;
+}
+
+.orangeBtn{
+    background:orange;
+}
+
+.redBtn{
+    background:red;
+}
+
+.progressFill2{
+    width:45%;
+    height:100%;
+    background:#f59e0b;
+}
+
+footer{
+margin-top:50px;
+background:white;
+padding:20px;
+text-align:center;
+}
+
+#toast{
+position:fixed;
+top:20px;
+right:20px;
+background:#16a34a;
+color:white;
+padding:15px;
+border-radius:8px;
+display:none;
+}

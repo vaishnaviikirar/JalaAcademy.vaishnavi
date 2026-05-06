@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="topbar">
+<h2>Magnus</h2>
+<button onclick="logout()">Logout</button>
+</div>
+
+<div class="sidebar">
+
+<div class="menuTitle" onclick="toggleMenu('employeeMenu')">
+Employee
+</div>
+
+<div class="submenu" id="employeeMenu">
+<p onclick="showSection('crud')">Create/Search</p>
+</div>
+
+<div class="menuTitle" onclick="toggleMenu('moreMenu')">
+More
+</div>
+
+<div class="submenu" id="moreMenu">
+
+<p onclick="showSection('tabs')">Multiple Tabs</p>
+
+<p onclick="showSection('accordion')">Accordion</p>
+
+<p onclick="showSection('autocomplete')">Autocomplete</p>
+
+<p onclick="showSection('slider')">Slider</p>
+
+<p onclick="showSection('tooltip')">Tooltip</p>
+
+<p onclick="showSection('popupSection')">Popups</p>
+
+<p onclick="showSection('gallery')">Images</p>
+
+<p onclick="showSection('upload')">Upload</p>
+
+<p onclick="showSection('links')">Links</p>
+
+<p onclick="showSection('iframePage')">iFrames</p>
+
+<p onclick="showSection('cssPage')">CSS Properties</p>
+
+<p onclick="showSection('widgets')">Widgets</p>
+
+</div>
+
+</div>
+
+<div class="content">
+
+<div class="noticeBox">
+If you are a working professional, up-skill with JALA Academy.
+</div>
+
+<div id="crud" class="section active">
+
+<h2>Employee CRUD</h2>
+
+<input id="empId" placeholder="Employee ID">
+
+<input id="empName" placeholder="Employee Name">
+
+<input id="empEmail" placeholder="Employee Email">
+
+<input id="empDept" placeholder="Department">
+
+<button onclick="saveEmployee()">Save Employee</button>
+
+<input id="searchEmployee" placeholder="Search Employee">
+
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Department</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="employeeTable"></tbody>
+</table>
+
+</div>
+
+<div id="tabs" class="section">
+
+<h2>Multiple Tabs</h2>
+
+<div class="tabs">
+<button onclick="openTab('tab1')">Plan to Succeed</button>
+<button onclick="openTab('tab2')">UnLearning</button>
+</div>
+
+<div id="tab1" class="tab activeTab">
+Stay consistent and build projects daily.
+</div>
+
+<div id="tab2" class="tab">
+Remove outdated habits and improve yourself.
+</div>
+
+</div>
+
+<div id="accordion" class="section">
+
+<h2>Collapsible Content</h2>
+
+<button class="accordionBtn">Open Accordion</button>
+
+<div class="accordionContent">
+This is accordion content similar to the screenshot.
+</div>
+
+</div>
+
+<div id="autocomplete" class="section">
+
+<h2>Autocomplete</h2>
+
+<input id="searchBox" placeholder="Search Technology">
+
+<div id="suggestions"></div>
+
+</div>
+
+<div id="slider" class="section">
+
+<h2>Slider</h2>
+
+<input type="range" min="0" max="100" value="40" id="sliderInput">
+
+<p id="sliderValue">40</p>
+
+</div>
+
+<div id="tooltip" class="section">
+
+<h2>Tooltip</h2>
+
+<div class="tooltipBox">
+
+Hover Me
+
+<span class="tooltipText">
+Welcome to JALA Academy
+</span>
+
+</div>
+
+</div>
+
+<div id="popupSection" class="section">
+
+<h2>Popup Examples</h2>
+
+<button onclick="showAlert()">Alert Box</button>
+
+<button onclick="showConfirm()">Confirm Box</button>
+
+<button onclick="showPrompt()">Prompt Box</button>
+
+</div>
+
+<div id="gallery" class="section">
+
+<h2>Image Gallery</h2>
+
+<div class="gallery">
+<img src="https://picsum.photos/300/200?1">
+<img src="https://picsum.photos/300/200?2">
+<img src="https://picsum.photos/300/200?3">
+</div>
+
+</div>
+
+<div id="upload" class="section">
+
+<h2>Uploading / Downloading Image</h2>
+
+<input type="file" id="imageInput">
+
+<br><br>
+
+<img id="preview" width="300">
+
+</div>
+
+    <div id="links" class="section">
+
+        <h2>Links</h2>
+
+        <div class="linkTabs">
+
+            <button onclick="openLinkTab('workingLinks')">
+                Working Links
+            </button>
+
+            <button onclick="openLinkTab('brokenLinks')">
+                Broken Links
+            </button>
+
+            <button onclick="openLinkTab('imageLinks')">
+                Image Links
+            </button>
+
+            <button onclick="openLinkTab('statusCodes')">
+                Status Codes
+            </button>
+
+        </div>
+
+        <!-- WORKING LINKS -->
+
+        <div id="workingLinks" class="linkContent activeLink">
+
+            <a href="https://www.google.com" target="_blank">
+                Google
+            </a>
+
+            <br><br>
+
+            <a href="https://www.linkedin.com" target="_blank">
+                LinkedIn
+            </a>
+
+            <br><br>
+
+            <a href="https://jalaacademy.com/" target="_blank">
+                JALA Academy
+            </a>
+
+        </div>
+
+        <!-- BROKEN LINKS -->
+
+        <div id="brokenLinks" class="linkContent">
+
+            <a href="#">
+                Broken Link 1
+            </a>
+
+            <br><br>
+
+            <a href="#">
+                Broken Link 2
+            </a>
+
+        </div>
+
+        <!-- IMAGE LINKS -->
+
+        <div id="imageLinks" class="linkContent">
+
+            <a href="https://growictech.com/" target="_blank">
+
+                <img src="https://growictech.com/assets/images/logo.png"
+                     class="companyImage">
+
+            </a>
+
+            <a href="https://www.linkedin.com" target="_blank">
+
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                     class="companyImage">
+
+            </a>
+
+            <a href="https://www.google.com" target="_blank">
+
+                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+                     class="companyImage">
+
+            </a>
+
+            <a href="https://jalaacademy.com/" target="_blank">
+
+                <img src="https://jalaacademy.com/assets/images/logo.png"
+                     class="companyImage">
+
+            </a>
+
+        </div>
+
+        <!-- STATUS CODES -->
+
+        <div id="statusCodes" class="linkContent">
+
+            <button onclick="showStatus(200)">
+                200
+            </button>
+
+            <button onclick="showStatus(404)">
+                404
+            </button>
+
+            <button onclick="showStatus(500)">
+                500
+            </button>
+
+            <p id="statusResult"></p>
+
+        </div>
+
+    </div>
+
+<div id="iframePage" class="section">
+
+<h2>iFrames</h2>
+
+<iframe
+src="https://www.wikipedia.org"
+width="700"
+height="400">
+</iframe>
+
+</div>
+
+    <div id="cssPage" class="section">
+
+        <h2>CSS Properties</h2>
+
+        <div class="cssTabs">
+
+            <button onclick="openCssTab('labelsTab')">
+                Labels
+            </button>
+
+            <button onclick="openCssTab('buttonsTab')">
+                Buttons
+            </button>
+
+            <button onclick="openCssTab('alertsTab')">
+                Alerts
+            </button>
+
+            <button onclick="openCssTab('progressTab')">
+                Progress Bars
+            </button>
+
+        </div>
+
+        <!-- LABELS -->
+
+        <div id="labelsTab" class="cssContent activeCss">
+
+<span class="label successLabel">
+Success
+</span>
+
+            <span class="label warningLabel">
+Warning
+</span>
+
+            <span class="label dangerLabel">
+Danger
+</span>
+
+        </div>
+
+        <!-- BUTTONS -->
+
+        <div id="buttonsTab" class="cssContent">
+
+            <button class="greenBtn">
+                Success Button
+            </button>
+
+            <button class="orangeBtn">
+                Warning Button
+            </button>
+
+            <button class="redBtn">
+                Danger Button
+            </button>
+
+        </div>
+
+        <!-- ALERTS -->
+
+        <div id="alertsTab" class="cssContent">
+
+            <div class="successBox">
+                Success! Indicates successful action.
+            </div>
+
+            <div class="infoBox">
+                Info! Indicates information.
+            </div>
+
+            <div class="warningBox">
+                Warning! Needs attention.
+            </div>
+
+            <div class="dangerBox">
+                Danger! Serious issue.
+            </div>
+
+        </div>
+
+        <!-- PROGRESS -->
+
+        <div id="progressTab" class="cssContent">
+
+            <div class="progress">
+                <div class="progressFill"></div>
+            </div>
+
+            <br>
+
+            <div class="progress">
+                <div class="progressFill2"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+<div id="widgets" class="section">
+
+<h2>Dashboard Widgets</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Employees</h3>
+<p id="employeeCount">0</p>
+</div>
+
+<div class="card">
+<h3>Projects</h3>
+<p>12</p>
+</div>
+
+<div class="card">
+<h3>Notifications</h3>
+<p>5</p>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+Copyright © 2026 JALA Technologies
+</footer>
+
+</div>
+
+<div id="toast">
+Saved Successfully
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
